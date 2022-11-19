@@ -10,7 +10,7 @@
 
 /////////////////////////////////////
 
-// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const formRef = document.querySelector('.form');
 
@@ -36,11 +36,14 @@ function createPromise(position, delay) {
   } )
 }
 
-// function onSuccess(value) { Notify.success(value) };
-// function onError(error) { Notify.failure(error) };
+function onSuccess(value) { Notify.success(value) };
+function onError(error) { Notify.failure(error) };
 
-function onSuccess(value) { console.log(value) };
-function onError(error) { console.log(error) };
+// function onSuccess(value) { console.log(`${ value }`)};
+// function onError(error) { console.log(`${error}`) };
+
+// function onSuccess(value) { alert(`${ value }`)};
+// function onError(error) { alert(`${ error }`)};
 
 const onFormSubmit = (e) => {
   e.preventDefault();
